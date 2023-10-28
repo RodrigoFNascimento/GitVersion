@@ -1,4 +1,4 @@
 # GitVersion
 
 
-test
+test test
