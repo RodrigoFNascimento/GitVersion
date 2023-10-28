@@ -19,7 +19,7 @@ update-build-number: true
 
 
 branches:
-  master:
+  main:
     regex: ^master$
     mode: ContinuousDeployment
     tag: ''
