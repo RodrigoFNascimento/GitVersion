@@ -1,0 +1,26 @@
+branches:
+  master:
+    regex: ^master$
+    mode: ContinuousDeployment
+    tag: ''
+
+  develop:
+    regex: ^develop\/.*$ # Adjust the regex pattern to match your develop branch naming convention.
+    mode: ContinuousDeployment
+    tag: ''
+
+  feature:
+    regex: ^feature\/.*\/.*$ # Adjust the regex pattern to match your feature branch naming convention.
+    mode: ContinuousDeployment
+    tag: ''
+
+versioningScheme: Semantic
+assemblyVersioningScheme: MajorMinor
+mode: ContinuousDeployment
+increment: Inherit
+majorVersionBumpMessage: ''
+minorVersionBumpMessage: ''
+patchVersionBumpMessage: ''
+noBumpMessage: ''
+buildMetaDataPadding: 4
+commitMessageIncrementing: Enabled
