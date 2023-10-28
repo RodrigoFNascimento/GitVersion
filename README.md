@@ -1,3 +1,3 @@
 # GitVersion
 
-this came from the branch develop
+this came from the branch release
