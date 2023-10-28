@@ -3,7 +3,7 @@ name: Determine Semver Version
 on:
   push:
     branches:
-      - main # You can change this to your project's main branch
+      - main
 
 jobs:
   build:
