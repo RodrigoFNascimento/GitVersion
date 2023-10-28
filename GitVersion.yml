@@ -20,7 +20,7 @@ update-build-number: true
 branches:
   main:
     regex: ^master$|^main$
-    mode: ContinuousDeployment
+    mode: ContinuousDelivery
     tag: ''
     increment: Patch
     prevent-increment-of-merged-branch-version: false
