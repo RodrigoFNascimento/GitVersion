@@ -16,20 +16,3 @@ tag-pre-release-weight: 60000
 commit-message-incrementing: Enabled
 merge-message-formats: {}
 update-build-number: true
-
-
-branches:
-  main:
-    regex: ^master$
-    mode: ContinuousDeployment
-    tag: ''
-
-  develop:
-    regex: ^develop\/.*$
-    mode: ContinuousDeployment
-    tag: ''
-
-  feature:
-    regex: ^feature\/.*\/.*$
-    mode: ContinuousDeployment
-    tag: ''
