@@ -14,7 +14,7 @@ branches:
     mode: ContinuousDeployment
     tag: ''
 
-versioningScheme: Semantic
+versioningScheme: semantic
 assemblyVersioningScheme: MajorMinor
 mode: ContinuousDeployment
 increment: Inherit
