@@ -31,49 +31,49 @@ branches:
     is-mainline: true
     pre-release-weight: 55000
   develop:
-    regex: ^dev(elop)?(ment)?$
+    regex: ^dev(elop)?(ment)?(\/([0-z]|-)+)*$
     mode: ContinuousDeployment
     tag: alpha
     increment: Minor
     prevent-increment-of-merged-branch-version: true
     track-merge-target: true
-    source-branches: []
+    source-branches: [ 'main' ]
     tracks-release-branches: true
     is-release-branch: false
     is-mainline: false
     pre-release-weight: 0
   release:
-    regex: ^releases?[/-]
+    regex: ^releases?(\/([0-z]|-)+)*$
     mode: ContinuousDelivery
     tag: beta
     increment: None
     prevent-increment-of-merged-branch-version: true
     track-merge-target: false
-    source-branches: [ 'develop', 'main', 'release' ]
+    source-branches: [ 'develop', 'main' ]
     tracks-release-branches: false
     is-release-branch: true
     is-mainline: false
     pre-release-weight: 30000
   feature:
-    regex: ^features?[/-]
+    regex: ^features?(\/([0-z]|-)+)*$
     mode: ContinuousDelivery
     tag: useBranchName
     increment: Inherit
     prevent-increment-of-merged-branch-version: true
     track-merge-target: false
-    source-branches: [ 'develop', 'main', 'release', 'feature', 'hotfix' ]
+    source-branches: [ 'develop' ]
     tracks-release-branches: false
     is-release-branch: false
     is-mainline: false
     pre-release-weight: 30000
   hotfix:
-    regex: ^hotfix(es)?[/-]
+    regex: ^hotfix(es)?(\/([0-z]|-)+)*$
     mode: ContinuousDelivery
     tag: beta
     increment: Patch
     prevent-increment-of-merged-branch-version: false
     track-merge-target: false
-    source-branches: [ 'develop', 'main' ]
+    source-branches: [ 'develop', 'release', 'main' ]
     tracks-release-branches: false
     is-release-branch: false
     is-mainline: false
