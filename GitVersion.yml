@@ -34,7 +34,7 @@ branches:
     regex: ^dev(elop)?(ment)?(\/([0-z]|-)+)*$
     mode: ContinuousDeployment
     tag: alpha
-    increment: Minor
+    increment: Inherit
     prevent-increment-of-merged-branch-version: true
     track-merge-target: true
     source-branches: [ 'main' ]
