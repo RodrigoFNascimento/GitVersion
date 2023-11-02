@@ -30,6 +30,9 @@ branches:
     is-release-branch: false
     is-mainline: true
     pre-release-weight: 55000
+    major-version-bump-message: '\+semver:\s?(breaking|major)'
+    minor-version-bump-message: '\+semver:\s?(feature|minor)'
+    patch-version-bump-message: '\+semver:\s?(fix|patch)'
   develop:
     regex: ^dev(elop)?(ment)?(\/([0-z]|-)+)*$
     mode: ContinuousDeployment
