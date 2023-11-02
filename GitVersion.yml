@@ -18,64 +18,10 @@ merge-message-formats: {}
 update-build-number: true
 
 branches:
-  main:
-    regex: ^master$|^main$
-    mode: ContinuousDelivery
-    tag: ''
-    increment: Minor
-    prevent-increment-of-merged-branch-version: true
-    track-merge-target: false
-    source-branches: [ 'develop', 'release' ]
-    tracks-release-branches: false
-    is-release-branch: false
-    is-mainline: true
-    pre-release-weight: 55000
   develop:
     regex: ^dev(elop)?(ment)?(\/([0-z]|-)+)*$
-    mode: ContinuousDeployment
-    tag: alpha
-    increment: Inherit
-    prevent-increment-of-merged-branch-version: true
-    track-merge-target: true
-    source-branches: [ 'main' ]
-    tracks-release-branches: true
-    is-release-branch: false
-    is-mainline: false
-    pre-release-weight: 0
   release:
     regex: ^releases?(\/([0-z]|-)+)*$
-    mode: ContinuousDelivery
-    tag: beta
-    increment: None
-    prevent-increment-of-merged-branch-version: true
-    track-merge-target: false
-    source-branches: [ 'develop', 'main' ]
-    tracks-release-branches: false
-    is-release-branch: true
-    is-mainline: false
-    pre-release-weight: 30000
   feature:
     regex: ^features?(\/([0-z]|-)+)*$
-    mode: ContinuousDelivery
-    tag: useBranchName
-    increment: Inherit
-    prevent-increment-of-merged-branch-version: true
-    track-merge-target: false
-    source-branches: [ 'develop' ]
-    tracks-release-branches: false
-    is-release-branch: false
-    is-mainline: false
-    pre-release-weight: 30000
-  hotfix:
-    regex: ^hotfix(es)?(\/([0-z]|-)+)*$
-    mode: ContinuousDelivery
-    tag: beta
-    increment: Patch
-    prevent-increment-of-merged-branch-version: true
-    track-merge-target: false
-    source-branches: [ 'develop', 'release', 'main' ]
-    tracks-release-branches: false
-    is-release-branch: false
-    is-mainline: false
-    pre-release-weight: 30000
 
